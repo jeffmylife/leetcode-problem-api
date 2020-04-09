@@ -22,6 +22,6 @@ class Solution:
     
     def permute(self, nums: List[int]) -> List[List[int]]:
         permutations = Solution._permute(self,nums)
-        return Solution._unique(Solution._flatten(permutations))
+        return permutations
         
             
