@@ -7,11 +7,10 @@ class TreeNode:
 
 class Solution:
     def _bfs(self, node, target):
-        if node is None: 
-            return None
-        if node.val==target.val:
-            return node
-        return Solution._bfs(self, node.left, target) or Solution._bfs(self, node.right, target)
+        if node: 
+            if node.val==target.val:
+                return node
+            return Solution._bfs(self, node.left, target) or Solution._bfs(self, node.right, target)
             
     
     def getTargetCopy(self, original: TreeNode, cloned: TreeNode, target: TreeNode) -> TreeNode:
